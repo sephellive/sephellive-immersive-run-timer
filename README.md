@@ -2,7 +2,7 @@
 
 A lightweight, persistent run timer for S.T.A.L.K.E.R. Anomaly. It records the current run, survives saves and level transitions, and never stops counting while the game is running.
 
-Position is adjusted live from MCM with X/Y sliders and a preview timer. The FOMOD lets you choose a restrained Zone-style framed display or a minimal text-only display.
+Position is adjusted live from MCM with X/Y sliders and a preview timer. The FOMOD shows a picture preview for each of the five frames: Radiation Rig, Field Chrono, Zone Map, Anomaly Violet and Artifact Detector.
 
 ## Requirements
 

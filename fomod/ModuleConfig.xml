@@ -2,8 +2,11 @@
 <config>
   <moduleName>Immersive Run Timer</moduleName>
   <requiredInstallFiles><folder source="00 Core" destination="" priority="0" /></requiredInstallFiles>
-  <installSteps order="Explicit"><installStep name="Visual style"><optionalFileGroups order="Explicit"><group name="Choose one" type="SelectExactlyOne"><plugins order="Explicit">
-    <plugin name="Zone frame"><description>Subtle dark panel with amber Zone styling.</description><files><folder source="01 Zone Frame" destination="" priority="0" /></files><typeDescriptor><type name="Recommended" /></typeDescriptor></plugin>
-    <plugin name="Minimal"><description>Text-only display with no panel.</description><files><folder source="02 Minimal" destination="" priority="0" /></files><typeDescriptor><type name="Optional" /></typeDescriptor></plugin>
+  <installSteps order="Explicit"><installStep name="Choose timer frame"><optionalFileGroups order="Explicit"><group name="Select exactly one frame" type="SelectExactlyOne"><plugins order="Explicit">
+    <plugin name="Radiation Rig"><description>Amber radiation meter, red warning lamp and welded metal shell.</description><image path="fomod\images\radiation_rig.png" /><files><folder source="01 radiation_rig" destination="" priority="0" /></files><typeDescriptor><type name="Recommended" /></typeDescriptor></plugin>
+    <plugin name="Field Chrono"><description>Scavenged wrist chronometer with compass and military strap.</description><image path="fomod\images\field_chrono.png" /><files><folder source="01 field_chrono" destination="" priority="0" /></files><typeDescriptor><type name="Optional" /></typeDescriptor></plugin>
+    <plugin name="Zone Map"><description>Torn map, hazard stencil and cyan signal lamp.</description><image path="fomod\images\zone_map.png" /><files><folder source="01 zone_map" destination="" priority="0" /></files><typeDescriptor><type name="Optional" /></typeDescriptor></plugin>
+    <plugin name="Anomaly Violet"><description>Monolith-era metal frame with contained violet anomaly crystal.</description><image path="fomod\images\anomaly_purple.png" /><files><folder source="01 anomaly_purple" destination="" priority="0" /></files><typeDescriptor><type name="Optional" /></typeDescriptor></plugin>
+    <plugin name="Artifact Detector"><description>Detector housing with turquoise artifact core and amber status lamps.</description><image path="fomod\images\artifact_detector.png" /><files><folder source="01 artifact_detector" destination="" priority="0" /></files><typeDescriptor><type name="Optional" /></typeDescriptor></plugin>
   </plugins></group></optionalFileGroups></installStep></installSteps>
 </config>

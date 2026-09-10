@@ -1,0 +1,1 @@
+<w><panel x="0" y="0" width="256" height="80" stretch="1"><texture>ui\ui_sep_run_timer_field_chrono</texture><time x="72" y="27" width="116" height="27"><text font="letterica18" r="190" g="255" b="125" a="255" align="c" vert_align="c">00:00:00</text></time></panel></w>
