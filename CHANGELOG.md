@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.5.1
+- Centred the timer text inside the Field Chrono frame.
+
 ## 1.5.0
 - Replaced the unsupported long dash in English and Russian live-positioning headings with a safe hyphen.
 - Slightly increased the Radiation Rig frame height and re-centred its timer text for better proportions.
