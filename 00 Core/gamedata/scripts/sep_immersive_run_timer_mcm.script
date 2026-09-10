@@ -1,0 +1,14 @@
+-- The _mcm suffix makes this page discoverable by Mod Configuration Menu.
+function on_mcm_load(options)
+  local op = { id="main", sh=true, gr={
+    {id="title", type="title", text="Immersive Run Timer"},
+    {id="hint", type="text", text="The timer on screen is the preview. Adjust X and Y, then close MCM."},
+    {id="pos_x", type="track", val=2, def=850, min=0, max=900, step=1},
+    {id="pos_y", type="track", val=2, def=25, min=0, max=740, step=1},
+  }}
+  return op, "sep_immersive_run_timer"
+end
+
+function on_option_change()
+  if HUD then HUD:refresh_position() end
+end

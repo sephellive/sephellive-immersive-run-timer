@@ -20,7 +20,13 @@ end
 class "SepRunTimer" (CUIScriptWnd)
 function SepRunTimer:__init() super()
   self:SetWndRect(Frect():set(0, 0, 1024, 768))
-  self.seconds = load_var(db.actor, KEY) or 0
+  -- Match NewRunTimer: when this addon is first installed mid-run, begin from
+  -- Anomaly's recorded time for the current playthrough instead of 00:00:00.
+  self.seconds = load_var(db.actor, KEY)
+  if not self.seconds then
+    self.seconds = utils_obj.time_spent_in_zone(1) / level.get_time_factor()
+    save_var(db.actor, KEY, self.seconds)
+  end
   self.last = time_global()
   local xml = CScriptXmlInit(); xml:ParseFile("sep_immersive_run_timer.xml")
   self.panel = xml:InitStatic("panel", self)
@@ -45,17 +51,4 @@ function SepRunTimer:Update()
   local m = math.floor((self.seconds % 3600) / 60)
   local s = self.seconds % 60
   self.time:SetText(string.format("%02d:%02d:%02d", h, m, s))
-end
-
-function on_mcm_load(options)
-  return { id="main", sh=true, gr={
-    {id="title", type="title", text="Immersive Run Timer"},
-    {id="hint", type="text", text="The preview is the live timer. Move it with the X and Y sliders."},
-    {id="pos_x", type="track", val=2, def=850, min=0, max=900, step=1},
-    {id="pos_y", type="track", val=2, def=25, min=0, max=740, step=1},
-  }}, "sep_immersive_run_timer"
-end
-
-function on_option_change()
-  if HUD then HUD:refresh_position() end
 end
