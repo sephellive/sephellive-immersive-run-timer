@@ -1,1 +1,1 @@
-<w><panel x="0" y="0" width="154" height="48" stretch="1"><texture>ui\ui_sep_run_timer_radiation_rig</texture><time x="43" y="16" width="70" height="16"><text font="letterica16" r="255" g="190" b="48" a="255" align="c" vert_align="c">00:00:00</text></time></panel></w>
+<w><panel x="0" y="0" width="154" height="54" stretch="1"><texture>ui\ui_sep_run_timer_radiation_rig</texture><time x="43" y="19" width="70" height="16"><text font="letterica16" r="255" g="190" b="48" a="255" align="c" vert_align="c">00:00:00</text></time></panel></w>

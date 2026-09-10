@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.0
+- Replaced the unsupported long dash in English and Russian live-positioning headings with a safe hyphen.
+- Slightly increased the Radiation Rig frame height and re-centred its timer text for better proportions.
+
 ## 1.4.0
 
 - Reduced all illustrated timer layouts to 60% (154x48) and proportionally resized the text areas.
