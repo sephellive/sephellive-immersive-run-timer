@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.0
+
+- MCM X/Y and text-size values are now polled by the real HUD every frame, including inside live positioning.
+- Rebuilt all frame alpha masks: no rectangular black backdrop in-game, but a shaped shadow and readable dark timer inset remain.
+- Rebuilt FOMOD preview images with a dark display background.
+
 ## 1.2.0
 
 - Added complete English and Russian MCM localisation.

@@ -59,8 +59,20 @@ function SepRunTimer:refresh_layout()
   self:refresh_font()
 end
 
+function SepRunTimer:sync_mcm_layout()
+  local x = ui_mcm and ui_mcm.get("sep_immersive_run_timer/timer_main/pos_x") or 850
+  local y = ui_mcm and ui_mcm.get("sep_immersive_run_timer/timer_main/pos_y") or 25
+  local scale = ui_mcm and ui_mcm.get("sep_immersive_run_timer/timer_main/font_scale") or 1
+  if x ~= self.mcm_x or y ~= self.mcm_y or scale ~= self.mcm_scale then
+    self.mcm_x, self.mcm_y, self.mcm_scale = x, y, scale
+    self:refresh_layout()
+  end
+end
+
 function SepRunTimer:Update()
   CUIScriptWnd.Update(self)
+  -- MCM is a separate script environment. Polling its values here moves the real HUD immediately.
+  self:sync_mcm_layout()
   local now = time_global()
   if now - self.last < 1000 then return end
   self.seconds = self.seconds + math.floor((now - self.last) / 1000)

@@ -4,6 +4,8 @@ A lightweight, persistent run timer for S.T.A.L.K.E.R. Anomaly. It records the c
 
 Position is adjusted live from MCM with X/Y sliders and a preview timer. The FOMOD shows a picture preview for five illustrated frames — Radiation Rig, Field Chrono, Zone Map, Anomaly Violet and Artifact Detector — plus **Plain Text**. Plain Text can independently scale its font from 1 to 4 in MCM.
 
+The illustrated frames use a transparent outer silhouette with a soft, shaped backing and a dark inset behind the timer. The FOMOD previews use a separate dark background for readability.
+
 ## Requirements
 
 - S.T.A.L.K.E.R. Anomaly 1.5.3 / GAMMA 0.9.5
