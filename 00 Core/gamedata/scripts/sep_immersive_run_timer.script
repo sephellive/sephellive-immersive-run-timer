@@ -1,6 +1,6 @@
 -- Immersive Run Timer. Persistent, save-safe and independent of the UI layout.
-local HUD
 local KEY = "sep_immersive_run_timer.seconds"
+sep_immersive_run_timer_hud = nil
 
 function on_game_start()
   RegisterScriptCallback("actor_on_first_update", function() activate_timer() end)
@@ -8,13 +8,16 @@ function on_game_start()
 end
 
 function activate_timer()
-  if HUD then return end
-  HUD = SepRunTimer()
-  get_hud():AddDialogToRender(HUD)
+  if sep_immersive_run_timer_hud then return end
+  sep_immersive_run_timer_hud = SepRunTimer()
+  get_hud():AddDialogToRender(sep_immersive_run_timer_hud)
 end
 
 function deactivate_timer()
-  if HUD then get_hud():RemoveDialogToRender(HUD); HUD = nil end
+  if sep_immersive_run_timer_hud then
+    get_hud():RemoveDialogToRender(sep_immersive_run_timer_hud)
+    sep_immersive_run_timer_hud = nil
+  end
 end
 
 class "SepRunTimer" (CUIScriptWnd)
@@ -31,13 +34,29 @@ function SepRunTimer:__init() super()
   local xml = CScriptXmlInit(); xml:ParseFile("sep_immersive_run_timer.xml")
   self.panel = xml:InitStatic("panel", self)
   self.time = xml:InitTextWnd("panel:time", self.panel)
-  self:refresh_position()
+  self:refresh_layout()
 end
 
 function SepRunTimer:refresh_position()
-  local x = ui_mcm and ui_mcm.get("sep_immersive_run_timer/main/pos_x") or 850
-  local y = ui_mcm and ui_mcm.get("sep_immersive_run_timer/main/pos_y") or 25
+  local x = ui_mcm and ui_mcm.get("sep_immersive_run_timer/timer_main/pos_x") or 850
+  local y = ui_mcm and ui_mcm.get("sep_immersive_run_timer/timer_main/pos_y") or 25
   self.panel:SetWndPos(vector2():set(x, y))
+end
+
+function SepRunTimer:refresh_font()
+  local scale = ui_mcm and ui_mcm.get("sep_immersive_run_timer/timer_main/font_scale") or 1
+  local fonts = {GetFontLetterica16Russian(), GetFontLetterica18Russian(), GetFontGraffiti22Russian(), GetFontGraffiti32Russian()}
+  self.time:SetFont(fonts[scale] or fonts[1])
+  -- Plain Text has no artwork, so its container grows with the selected font.
+  if sep_immersive_run_timer_plain then
+    self.panel:SetWndSize(vector2():set(132 * scale, 26 * scale))
+    self.time:SetWndSize(vector2():set(132 * scale, 26 * scale))
+  end
+end
+
+function SepRunTimer:refresh_layout()
+  self:refresh_position()
+  self:refresh_font()
 end
 
 function SepRunTimer:Update()

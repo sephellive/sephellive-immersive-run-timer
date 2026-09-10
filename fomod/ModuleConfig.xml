@@ -8,5 +8,6 @@
     <plugin name="Zone Map"><description>Torn map, hazard stencil and cyan signal lamp.</description><image path="fomod\images\zone_map.png" /><files><folder source="01 zone_map" destination="" priority="0" /></files><typeDescriptor><type name="Optional" /></typeDescriptor></plugin>
     <plugin name="Anomaly Violet"><description>Monolith-era metal frame with contained violet anomaly crystal.</description><image path="fomod\images\anomaly_purple.png" /><files><folder source="01 anomaly_purple" destination="" priority="0" /></files><typeDescriptor><type name="Optional" /></typeDescriptor></plugin>
     <plugin name="Artifact Detector"><description>Detector housing with turquoise artifact core and amber status lamps.</description><image path="fomod\images\artifact_detector.png" /><files><folder source="01 artifact_detector" destination="" priority="0" /></files><typeDescriptor><type name="Optional" /></typeDescriptor></plugin>
+    <plugin name="Plain Text"><description>Clean timer text without a frame. Its text size can be adjusted from 1 to 4 in MCM.</description><image path="fomod\images\plain_text.png" /><files><folder source="02 Minimal" destination="" priority="0" /></files><typeDescriptor><type name="Optional" /></typeDescriptor></plugin>
   </plugins></group></optionalFileGroups></installStep></installSteps>
 </config>
