@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.5.2
+- Plain Text now uses left alignment, so X=0 places the visible timer text flush with the left edge.
+
 ## 1.5.1
 - Centred the timer text inside the Field Chrono frame.
 
