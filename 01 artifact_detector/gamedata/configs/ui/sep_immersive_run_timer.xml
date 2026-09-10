@@ -1,1 +1,1 @@
-<w><panel x="0" y="0" width="154" height="48" stretch="1"><texture>ui\ui_sep_run_timer_artifact_detector</texture><time x="44" y="16" width="71" height="16"><text font="letterica16" r="255" g="181" b="47" a="255" align="c" vert_align="c">00:00:00</text></time></panel></w>
+<w><panel x="0" y="0" width="154" height="48" stretch="1"><texture>ui\ui_sep_run_timer_artifact_detector</texture><time x="44" y="14" width="71" height="16"><text font="letterica16" r="255" g="181" b="47" a="255" align="c" vert_align="c">00:00:00</text></time></panel></w>

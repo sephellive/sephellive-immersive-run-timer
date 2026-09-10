@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.5.6
+- Raised the Artifact Detector timer readout by 2 pixels.
+
 ## 1.5.5
 - Raised the Field Chrono readout by a further 2 pixels.
 
