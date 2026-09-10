@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.5.5
+- Raised the Field Chrono readout by a further 2 pixels.
+
 ## 1.5.4
 - Moved the Field Chrono readout up by 4 pixels to compensate for Letterica's low glyph baseline.
 
