@@ -1,6 +1,19 @@
-# &lt;Addon Name&gt;
+# Immersive Run Timer
 
-Short description of the addon.
+A lightweight, persistent run timer for S.T.A.L.K.E.R. Anomaly. It records the current run, survives saves and level transitions, and never stops counting while the game is running.
+
+Position is adjusted live from MCM with X/Y sliders and a preview timer. The FOMOD lets you choose a restrained Zone-style framed display or a minimal text-only display.
+
+## Requirements
+
+- S.T.A.L.K.E.R. Anomaly 1.5.3 / GAMMA 0.9.5
+- Mod Configuration Menu (included with GAMMA)
+
+## Credits
+
+- Jordan / NewRunTimer — inspiration and the original timer concept
+- Demonized / Anomaly Popup Messages — reference for live-positioning workflow
+- Sephellive — MCM rework, new UI variants and FOMOD packaging
 
 This repository is a template for small, independent S.T.A.L.K.E.R. Anomaly addons. Replace the placeholders, add the addon files under `gamedata`, and develop the mod without a separate build system.
 

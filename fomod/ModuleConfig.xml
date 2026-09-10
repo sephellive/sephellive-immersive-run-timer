@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <moduleName>Immersive Run Timer</moduleName>
+  <requiredInstallFiles><folder source="00 Core" destination="" priority="0" /></requiredInstallFiles>
+  <installSteps order="Explicit"><installStep name="Visual style"><optionalFileGroups order="Explicit"><group name="Choose one" type="SelectExactlyOne"><plugins order="Explicit">
+    <plugin name="Zone frame"><description>Subtle dark panel with amber Zone styling.</description><files><folder source="01 Zone Frame" destination="" priority="0" /></files><typeDescriptor><type name="Recommended" /></typeDescriptor></plugin>
+    <plugin name="Minimal"><description>Text-only display with no panel.</description><files><folder source="02 Minimal" destination="" priority="0" /></files><typeDescriptor><type name="Optional" /></typeDescriptor></plugin>
+  </plugins></group></optionalFileGroups></installStep></installSteps>
+</config>

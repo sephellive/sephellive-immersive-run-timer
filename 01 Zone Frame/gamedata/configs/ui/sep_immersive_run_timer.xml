@@ -1,0 +1,6 @@
+<w>
+  <panel x="0" y="0" width="145" height="30" stretch="1">
+    <texture a="170">ui_inGame2_edit_box_2</texture>
+    <time x="7" y="1" width="132" height="28"><text font="letterica18" r="238" g="155" b="23" a="235" align="c" vert_align="c">00:00:00</text></time>
+  </panel>
+</w>
