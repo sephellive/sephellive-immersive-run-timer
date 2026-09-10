@@ -1,1 +1,1 @@
-<w><panel x="0" y="0" width="256" height="80" stretch="1"><texture>ui\ui_sep_run_timer_zone_map</texture><time x="77" y="27" width="112" height="27"><text font="letterica18" r="238" g="155" b="23" a="255" align="c" vert_align="c">00:00:00</text></time></panel></w>
+<w><panel x="0" y="0" width="154" height="48" stretch="1"><texture>ui\ui_sep_run_timer_zone_map</texture><time x="46" y="16" width="67" height="16"><text font="letterica16" r="238" g="155" b="23" a="255" align="c" vert_align="c">00:00:00</text></time></panel></w>

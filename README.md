@@ -6,6 +6,8 @@ Position is adjusted live from MCM with X/Y sliders and a preview timer. The FOM
 
 The illustrated frames use a transparent outer silhouette with a soft, shaped backing and a dark inset behind the timer. The FOMOD previews use a separate dark background for readability.
 
+All timer layouts are compact: illustrated frames are 60% of their original 256x80 size (154x48), and Plain Text starts at the matching 60% scale.
+
 ## Requirements
 
 - S.T.A.L.K.E.R. Anomaly 1.5.3 / GAMMA 0.9.5

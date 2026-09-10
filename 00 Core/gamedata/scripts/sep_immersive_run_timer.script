@@ -45,12 +45,14 @@ end
 
 function SepRunTimer:refresh_font()
   local scale = ui_mcm and ui_mcm.get("sep_immersive_run_timer/timer_main/font_scale") or 1
-  local fonts = {GetFontLetterica16Russian(), GetFontLetterica18Russian(), GetFontGraffiti22Russian(), GetFontGraffiti32Russian()}
+  local fonts = {GetFontSmall(), GetFontLetterica16Russian(), GetFontGraffiti19Russian(), GetFontGraffiti22Russian()}
   self.time:SetFont(fonts[scale] or fonts[1])
   -- Plain Text has no artwork, so its container grows with the selected font.
   if sep_immersive_run_timer_plain then
-    self.panel:SetWndSize(vector2():set(132 * scale, 26 * scale))
-    self.time:SetWndSize(vector2():set(132 * scale, 26 * scale))
+    local factors = {0.60, 0.75, 0.90, 1.05}
+    local factor = factors[scale] or factors[1]
+    self.panel:SetWndSize(vector2():set(132 * factor, 26 * factor))
+    self.time:SetWndSize(vector2():set(132 * factor, 26 * factor))
   end
 end
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.0
+
+- Reduced all illustrated timer layouts to 60% (154x48) and proportionally resized the text areas.
+- Reduced the Plain Text base size to the same compact scale; its MCM slider remains available for enlargement.
+- Rebuilt the five frame silhouettes to connect fragmented details into coherent, shaped backings.
+
 ## 1.3.0
 
 - MCM X/Y and text-size values are now polled by the real HUD every frame, including inside live positioning.
