@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.5.4
+- Moved the Field Chrono readout up by 4 pixels to compensate for Letterica's low glyph baseline.
+
 ## 1.5.3
 - Centred the Field Chrono timer text against the full frame width.
 
