@@ -2,6 +2,13 @@
 <string_table>
   <string id="ui_mcm_menu_sep_immersive_run_timer"><text>Immersive Run Timer</text></string>
   <string id="ui_mcm_menu_timer_main"><text>Timer Settings</text></string>
+  <string id="ui_mcm_sep_immersive_run_timer_title"><text>Immersive Run Timer</text></string>
+  <string id="ui_mcm_sep_immersive_run_timer_hint"><text>Set a rough position here, or open live positioning to adjust the timer while looking at the game.</text></string>
+  <string id="ui_mcm_sep_immersive_run_timer_pos_x"><text>Horizontal position</text></string>
+  <string id="ui_mcm_sep_immersive_run_timer_pos_y"><text>Vertical position</text></string>
+  <string id="ui_mcm_sep_immersive_run_timer_font_scale"><text>Timer text size</text></string>
+  <string id="ui_mcm_sep_immersive_run_timer_preview"><text>Open live timer positioning</text></string>
+  <string id="ui_mcm_sep_immersive_run_timer_preview_title"><text>Immersive Run Timer - Live Positioning</text></string>
   <string id="ui_mcm_sep_immersive_run_timer_timer_main_title"><text>Immersive Run Timer</text></string>
   <string id="ui_mcm_sep_immersive_run_timer_timer_main_hint"><text>Set a rough position here, or open live positioning to adjust the timer while looking at the game.</text></string>
   <string id="ui_mcm_sep_immersive_run_timer_timer_main_pos_x"><text>Horizontal position</text></string>

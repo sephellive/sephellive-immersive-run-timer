@@ -38,13 +38,13 @@ function SepRunTimer:__init() super()
 end
 
 function SepRunTimer:refresh_position()
-  local x = ui_mcm and ui_mcm.get("sep_immersive_run_timer/timer_main/pos_x") or 850
-  local y = ui_mcm and ui_mcm.get("sep_immersive_run_timer/timer_main/pos_y") or 25
+  local x = ui_mcm and ui_mcm.get("sep_immersive_run_timer/pos_x") or 20
+  local y = ui_mcm and ui_mcm.get("sep_immersive_run_timer/pos_y") or 20
   self.panel:SetWndPos(vector2():set(x, y))
 end
 
 function SepRunTimer:refresh_font()
-  local scale = ui_mcm and ui_mcm.get("sep_immersive_run_timer/timer_main/font_scale") or 1
+  local scale = ui_mcm and ui_mcm.get("sep_immersive_run_timer/font_scale") or 2
   local fonts = {GetFontSmall(), GetFontLetterica16Russian(), GetFontGraffiti19Russian(), GetFontGraffiti22Russian()}
   self.time:SetFont(fonts[scale] or fonts[1])
   -- Plain Text has no artwork, so its container grows with the selected font.
@@ -62,9 +62,9 @@ function SepRunTimer:refresh_layout()
 end
 
 function SepRunTimer:sync_mcm_layout()
-  local x = ui_mcm and ui_mcm.get("sep_immersive_run_timer/timer_main/pos_x") or 850
-  local y = ui_mcm and ui_mcm.get("sep_immersive_run_timer/timer_main/pos_y") or 25
-  local scale = ui_mcm and ui_mcm.get("sep_immersive_run_timer/timer_main/font_scale") or 1
+  local x = ui_mcm and ui_mcm.get("sep_immersive_run_timer/pos_x") or 20
+  local y = ui_mcm and ui_mcm.get("sep_immersive_run_timer/pos_y") or 20
+  local scale = ui_mcm and ui_mcm.get("sep_immersive_run_timer/font_scale") or 2
   if x ~= self.mcm_x or y ~= self.mcm_y or scale ~= self.mcm_scale then
     self.mcm_x, self.mcm_y, self.mcm_scale = x, y, scale
     self:refresh_layout()

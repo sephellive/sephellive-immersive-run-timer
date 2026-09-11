@@ -1,0 +1,10 @@
+<string_table>
+  <string id="ui_mcm_menu_sep_immersive_run_timer"><text>Иммерсивный таймер забега</text></string>
+  <string id="ui_mcm_sep_immersive_run_timer_title"><text>Иммерсивный таймер забега</text></string>
+  <string id="ui_mcm_sep_immersive_run_timer_hint"><text>Задайте примерную позицию или откройте точную подгонку прямо в игре.</text></string>
+  <string id="ui_mcm_sep_immersive_run_timer_pos_x"><text>Позиция по горизонтали</text></string>
+  <string id="ui_mcm_sep_immersive_run_timer_pos_y"><text>Позиция по вертикали</text></string>
+  <string id="ui_mcm_sep_immersive_run_timer_font_scale"><text>Размер цифр таймера</text></string>
+  <string id="ui_mcm_sep_immersive_run_timer_preview"><text>Открыть точную подгонку в игре</text></string>
+  <string id="ui_mcm_sep_immersive_run_timer_preview_title"><text>Иммерсивный таймер забега - точная позиция</text></string>
+</string_table>

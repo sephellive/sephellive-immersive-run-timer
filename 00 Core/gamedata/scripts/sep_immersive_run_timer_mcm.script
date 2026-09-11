@@ -1,12 +1,12 @@
 -- MCM page and live positioning controller. The _mcm suffix makes it discoverable.
 local positioner_gui = nil
 
-local function path(key) return "sep_immersive_run_timer/timer_main/" .. key end
+local function path(key) return "sep_immersive_run_timer/" .. key end
 local function level_present() return level.present() end
 local commands = {
-  {key = "pos_x", min = 0, max = 1000, step = 1, def = 850},
-  {key = "pos_y", min = 0, max = 760, step = 1, def = 25},
-  {key = "font_scale", min = 1, max = 4, step = 1, def = 1},
+  {key = "pos_x", min = 0, max = 1000, step = 1, def = 20},
+  {key = "pos_y", min = 0, max = 760, step = 1, def = 20},
+  {key = "font_scale", min = 1, max = 4, step = 1, def = 2},
 }
 
 local function apply(key, value)
@@ -15,15 +15,15 @@ local function apply(key, value)
 end
 
 function on_mcm_load(options)
-  local op = {id = "timer_main", sh = true, gr = {
-    {id = "title", type = "title", text = "ui_mcm_sep_immersive_run_timer_timer_main_title"},
-    {id = "hint", type = "text", text = "ui_mcm_sep_immersive_run_timer_timer_main_hint"},
-    {id = "pos_x", type = "track", val = 2, def = 850, min = 0, max = 1000, step = 1},
-    {id = "pos_y", type = "track", val = 2, def = 25, min = 0, max = 760, step = 1},
-    {id = "font_scale", type = "track", val = 2, def = 1, min = 1, max = 4, step = 1},
+  local op = {id = "sep_immersive_run_timer", sh = true, gr = {
+    {id = "title", type = "title", text = "ui_mcm_sep_immersive_run_timer_title"},
+    {id = "hint", type = "text", text = "ui_mcm_sep_immersive_run_timer_hint"},
+    {id = "pos_x", type = "track", val = 2, def = 20, min = 0, max = 1000, step = 1},
+    {id = "pos_y", type = "track", val = 2, def = 20, min = 0, max = 760, step = 1},
+    {id = "font_scale", type = "track", val = 2, def = 2, min = 1, max = 4, step = 1},
     {id = "preview", type = "button", functor_ui = {start_ui}, precondition = {level_present}},
   }}
-  return op, "sep_immersive_run_timer"
+  return op
 end
 
 function on_option_change()
@@ -56,13 +56,13 @@ function RunTimerPositionControl:InitControls()
   self.dialog = xml:InitStatic("ctrl_lighting", self)
   xml:InitFrame("ctrl_lighting:frame", self.dialog)
   local title = xml:InitStatic("ctrl_lighting:cap_main", self.dialog)
-  title:TextControl():SetText(game.translate_string("ui_mcm_sep_immersive_run_timer_timer_main_preview_title"))
+  title:TextControl():SetText(game.translate_string("ui_mcm_sep_immersive_run_timer_preview_title"))
   self.scroll = xml:InitScrollView("ctrl_lighting:scroll", self.dialog); self.scroll:Clear()
   self.track, self.value = {}, {}
   for i, command in ipairs(commands) do
     local row = xml:InitStatic("ctrl_lighting:st", nil)
     local caption = xml:InitStatic("ctrl_lighting:cap", row)
-    caption:TextControl():SetText(game.translate_string("ui_mcm_sep_immersive_run_timer_timer_main_" .. command.key))
+    caption:TextControl():SetText(game.translate_string("ui_mcm_sep_immersive_run_timer_" .. command.key))
     local value = ui_mcm.get(path(command.key)) or command.def
     self.track[i] = xml:InitTrackBar("ctrl_lighting:track", row)
     self.track[i]:SetStep(command.step); self.track[i]:SetOptFBounds(command.min, command.max); self.track[i]:SetFValue(value)

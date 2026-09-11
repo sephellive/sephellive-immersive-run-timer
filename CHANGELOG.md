@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.5.10
+- Re-encoded the Russian MCM string table as Windows-1251, the format required by Anomaly. Russian menu entries and search now resolve correctly.
+
+## 1.5.9
+- Moved the timer to its own MCM root entry: **Immersive Run Timer** / **Иммерсивный таймер забега**.
+- Moved MCM values to the new root path, applying the new upper-left default position after updating from older versions.
+- Increased the default timer text size from `1` to `2`.
+
+## 1.5.8
+- Fixed MCM localisation loading: Russian and English string tables now use Anomaly's required `ui_st_` filename prefix.
+- Changed the default timer position to the upper-left corner (`X=20`, `Y=20`) for every FOMOD layout.
+
 ## 1.5.7
 - Raised the Radiation Rig timer readout by 2 pixels.
 
